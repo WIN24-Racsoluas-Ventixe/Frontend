@@ -27,7 +27,7 @@ const Booking = () => {
 
     const getEvent = async () => {
         try { 
-            const res = await fetch (`Länk${id}`) 
+            const res = await fetch (`https://win24-eventservice-dhcshke8dnf4a2ds.swedencentral-01.azurewebsites.net/api/Events${id}`) 
             if (!res.ok) throw new Error("Failed to fetch event")
 
             const data = await res.json()
@@ -46,7 +46,7 @@ const Booking = () => {
             e.preventDefault()
 
             try { 
-                const res = await fetch (`Länk`, {
+                const res = await fetch (`https://bookingservice-racsoluas-argjhsgvdkehgpaw.swedencentral-01.azurewebsites.net/api/Bookings`, {
                     method: 'POST', 
                     headers: {
                         'Content-Type': 'application/json'

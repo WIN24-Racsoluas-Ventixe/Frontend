@@ -30,7 +30,7 @@ const EventDetails = () => {
     const [event, setEvent] = useState({})
 
     const getEvents = async () => {
-        const res = await fetch (`Länk${id}`) 
+        const res = await fetch (`https://win24-eventservice-dhcshke8dnf4a2ds.swedencentral-01.azurewebsites.net/api/Events/${id}`) 
 
         if (res.ok) {
         const response = await res.json()

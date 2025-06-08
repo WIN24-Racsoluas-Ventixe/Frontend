@@ -1,5 +1,5 @@
 import React, { useEffect, useState} from 'react'
-import EventCard from '../components/EventCard'
+import EventCard from '../components/EventsCard'
 
 
 const EventList = () => {
@@ -8,7 +8,7 @@ const EventList = () => {
 
 
     const getEvents = async () => {
-        const res = await fetch ("Länk") 
+        const res = await fetch ("https://win24-eventservice-dhcshke8dnf4a2ds.swedencentral-01.azurewebsites.net/api/Events") 
 
         if (res.ok) {
         const response = await res.json()
